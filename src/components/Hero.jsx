@@ -22,10 +22,17 @@ export default function Hero() {
   return (
     <div className="bg-secondary relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 items-center py-20">
-          <div className="text-center md:text-left">
+        <div className="grid md:grid-cols-2 gap-8 items-center py-12 md:py-20">
+          <div className="flex justify-center md:order-2">
+            <img
+              src={profilePhoto}
+              alt="Sat Panha"
+              className="rounded-full shadow-lg"
+            />
+          </div>
+          <div className="text-center md:text-left md:order-1">
             <p className="text-lg font-sans text-accent">Hi, I'm Sat Panha</p>
-            <h1 className="text-4xl md:text-6xl font-bold text-primary font-serif mt-2">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-primary font-serif mt-2">
               A Creative Developer Building Beautiful Web Experiences
             </h1>
             <p className="mt-4 text-text-dark font-sans">
@@ -33,18 +40,18 @@ export default function Hero() {
               building beautiful and functional web applications. I am here to
               help you grow your business.
             </p>
-            <div className="mt-8 flex justify-center md:justify-start space-x-4">
+            <div className="mt-8 flex flex-col sm:flex-row items-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <button
                 type="button"
                 onClick={handleLearnMoreClick}
-                className="px-6 py-3 rounded-md text-lg font-medium text-black border bg-primary hover:bg-primary/80 font-sans transition"
+                className="w-full sm:w-auto px-6 py-3 rounded-md text-lg font-medium text-black border bg-primary hover:bg-primary/80 font-sans transition"
               >
                 Learn More
               </button>
               <button
                 type="button"
                 onClick={handleDownloadCV}
-                className="px-6 py-3 rounded-md text-lg font-medium text-primary bg-white border border-primary hover:bg-secondary font-sans transition"
+                className="w-full sm:w-auto px-6 py-3 rounded-md text-lg font-medium text-primary bg-white border border-primary hover:bg-secondary font-sans transition"
               >
                 Download CV
               </button>
@@ -63,13 +70,6 @@ export default function Hero() {
               <span>Interests: Web Development, UI/UX Design</span> 
               
             </div>
-          </div>
-          <div className="hidden md:block">
-            <img
-              src={profilePhoto}
-              alt="Sat Panha"
-              className="rounded-full shadow-lg"
-            />
           </div>
         </div>
       </div>
