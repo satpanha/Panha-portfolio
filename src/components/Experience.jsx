@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 
 const experiences = [
   { role: 'Head of Project & Event Department – CADT Student Association', time: 'May, 2025 – Present' },

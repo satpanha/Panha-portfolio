@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { useState } from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const sectionVariants = {
@@ -74,7 +74,7 @@ export default function Contact() {
     setIsSending(true);
 
     try {
-      const resp = await fetch('/api/contact', {
+      const resp = await fetch('https://panha-portfolio.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

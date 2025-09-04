@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { getSkillLogo } from "./SkillLogos";
 
 const categories = [
