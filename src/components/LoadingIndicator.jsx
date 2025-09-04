@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function LoadingIndicator() {
   const [isLoading, setIsLoading] = useState(true);

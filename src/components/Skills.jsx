@@ -1,4 +1,5 @@
 import { getSkillLogo } from "./SkillLogos";
+import { motion } from 'framer-motion';
 
 const categories = [
   { title: 'Languages', items: ['C', 'C++', 'Java', 'JavaScript'] },
