@@ -15,7 +15,7 @@ const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
 if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
-  console.warn('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID in server/.env');
+  console.warn('Missing TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID in backend/.env');
 }
 
 async function sendTelegramMessage(text) {
@@ -76,6 +76,14 @@ app.post('/api/contact', async (req, res) => {
     res.status(500).json({ ok: false, error: 'Internal server error' });
   }
 });
+
+// Start server locally when not running on Vercel
+if (process.env.VERCEL !== '1') {
+  const port = process.env.PORT || 3001;
+  app.listen(port, () => {
+    console.log(`API server listening on http://localhost:${port}`);
+  });
+}
 
 // ✅ Export Express app for Vercel (instead of app.listen)
 export default app;
