@@ -11,6 +11,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "framer-motion": "^12.35.2",
+    "lucide-react": "^0.577.0",
     "map": "^1.0.1",
     "motion": "^12.23.12",
     "react": "^19.1.1",

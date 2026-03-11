@@ -1,5 +1,7 @@
 import React from 'react';
-import { experienceContent } from '@/lib/data';
+// import { experienceContent } from '@/lib/data';
+// import { experienceContent } from '@/lib/data';
+import { experienceContent } from '../../lib/data';
 
 export default function Experience() {
   return (

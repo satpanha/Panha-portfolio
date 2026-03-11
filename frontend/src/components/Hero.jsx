@@ -41,20 +41,29 @@ export default function Hero() {
               help you grow your business.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+
               <button
                 type="button"
                 onClick={handleLearnMoreClick}
-                className="w-full sm:w-auto px-6 py-3 rounded-md text-lg font-medium text-black border bg-primary hover:bg-primary/80 font-sans transition"
+                className="w-full sm:w-auto px-6 py-3 rounded-md text-lg font-medium 
+                text-white bg-[#03002E] border border-primary 
+                hover:bg-white hover:text-black
+                font-sans transition-all duration-300 ease-in-out"
               >
                 Learn More
               </button>
+
               <button
                 type="button"
                 onClick={handleDownloadCV}
-                className="w-full sm:w-auto px-6 py-3 rounded-md text-lg font-medium text-primary bg-white border border-primary hover:bg-secondary font-sans transition"
+                className="w-full sm:w-auto px-6 py-3 rounded-md text-lg font-medium 
+                text-primary bg-white border border-primary 
+                hover:bg-[#03002E] hover:text-white
+                font-sans transition-all duration-300 ease-in-out"
               >
                 Download CV
               </button>
+
             </div>
             <div className="mt-6 text-sm text-text-dark font-sans">
               <span>Based in Cambodia</span>
@@ -67,8 +76,8 @@ export default function Hero() {
               <span>Languages: English, Khmer</span>
             </div>
             <div className="mt-4 text-sm text-text-dark font-sans">
-              <span>Interests: Web Development, UI/UX Design</span> 
-              
+              <span>Interests: Web Development, UI/UX Design</span>
+
             </div>
           </div>
         </div>

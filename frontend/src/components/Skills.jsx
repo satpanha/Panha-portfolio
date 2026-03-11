@@ -1,13 +1,6 @@
 import { getSkillLogo } from "./SkillLogos";
 import { motion } from 'framer-motion';
-
-const categories = [
-  { title: 'Languages', items: ['C', 'C++', 'Java', 'JavaScript'] },
-  { title: 'Frameworks', items: ['React.js', 'Express.js', 'Sequelize'] },
-  { title: 'Databases', items: ['MySQL', 'PostgreSQL'] },
-  { title: 'Tools', items: ['GitHub', 'Figma'] },
-  { title: 'Soft Skills', items: ['Problem-Solving', 'Teamwork', 'Communication'] },
-];
+import { skillsContent } from '../../lib/data';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -42,7 +35,7 @@ export default function Skills() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-primary text-center">Skills</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-primary text-center">{skillsContent.heading}</h2>
         <motion.div
           className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           variants={gridVariants}
@@ -50,17 +43,17 @@ export default function Skills() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {categories.map((cat) => (
+          {skillsContent.categories.map((cat) => (
             <motion.div
-              key={cat.title}
+              key={cat.name}
               className="rounded-xl border border-primary bg-white p-6 shadow-sm"
               variants={itemVariants}
             >
-              <h3 className="text-lg font-semibold text-primary">{cat.title}</h3>
+              <h3 className="text-lg font-semibold text-primary">{cat.name}</h3>
               <div className="mt-4 flex flex-wrap gap-2">
-                {cat.items.map((item) => (
+                {cat.skills.map((item) => (
                   <span key={item} className="inline-flex items-center gap-2 rounded-full bg-secondary text-primary px-3 py-1 text-sm font-medium">
-                    {getSkillLogo(item) || <span className="text-accent">•</span>}
+                    {getSkillLogo(item)}
                     {item}
                   </span>
                 ))}

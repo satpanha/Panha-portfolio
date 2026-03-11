@@ -1,8 +1,4 @@
-import React from 'react';
-import { contactContent } from '@/lib/data';
-import { Input } from '@/components/ui/input'; // Assuming shadcn/ui input
-import { Textarea } from '@/components/ui/textarea'; // Assuming shadcn/ui textarea
-import { Button } from '@/components/ui/button'; // Assuming shadcn/ui button
+import { contactContent } from '../../lib/data';
 
 export default function Contact() {
   return (
@@ -18,19 +14,19 @@ export default function Contact() {
           <form className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2 font-body">Name</label>
-              <Input type="text" id="name" placeholder="Your Name" />
+              <input type="text" id="name" placeholder="Your Name" className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2 font-body">Email</label>
-              <Input type="email" id="email" placeholder="your@example.com" />
+              <input type="email" id="email" placeholder="your@example.com" className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2 font-body">Message</label>
-              <Textarea id="message" placeholder="Your message..." rows={5} />
+              <textarea id="message" placeholder="Your message..." rows={5} className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
             </div>
-            <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+            <button type="submit" className="w-full rounded-md bg-primary px-4 py-2 text-primary-foreground hover:bg-primary/90">
               Send Message
-            </Button>
+            </button>
           </form>
           <div className="mt-8 text-center">
             <h3 className="text-xl font-semibold font-heading mb-4">Find me on:</h3>

@@ -1,44 +1,52 @@
 import {
-  FaJava,
-  FaReact,
-  FaGithub,
-  FaFigma
-} from "react-icons/fa";
-import {
-  SiJavascript,
-  SiExpress,
-  SiMysql,
-  SiPostgresql,
-  SiCplusplus,
-  SiSequelize,
-  SiC
-} from "react-icons/si";
+  FileCode2,
+  Paintbrush,
+  Braces,
+  FileType,
+  Atom,
+  IterationCcw,
+  Palette,
+  Server,
+  Cable,
+  Globe,
+  Database,
+  DatabaseZap,
+  GitBranch,
+  Github,
+  MonitorSmartphone,
+  Figma,
+  Crown,
+  Users,
+  MessageCircle,
+  CalendarCheck,
+  Code,
+} from "lucide-react";
+
+const iconClass = "w-4 h-4";
+
+const skillIcons = {
+  "HTML": <FileCode2 className={iconClass} />,
+  "CSS": <Paintbrush className={iconClass} />,
+  "JavaScript": <Braces className={iconClass} />,
+  "TypeScript": <FileType className={iconClass} />,
+  "React.js": <Atom className={iconClass} />,
+  "Next.js": <IterationCcw className={iconClass} />,
+  "TailwindCSS": <Palette className={iconClass} />,
+  "Node.js": <Server className={iconClass} />,
+  "Express.js": <Cable className={iconClass} />,
+  "REST APIs": <Globe className={iconClass} />,
+  "MongoDB": <DatabaseZap className={iconClass} />,
+  "MySQL": <Database className={iconClass} />,
+  "Git": <GitBranch className={iconClass} />,
+  "GitHub": <Github className={iconClass} />,
+  "VS Code": <MonitorSmartphone className={iconClass} />,
+  "Figma": <Figma className={iconClass} />,
+  "Leadership": <Crown className={iconClass} />,
+  "Team Collaboration": <Users className={iconClass} />,
+  "Professional Communication": <MessageCircle className={iconClass} />,
+  "Event Coordination": <CalendarCheck className={iconClass} />,
+};
 
 export function getSkillLogo(name) {
-  switch (name) {
-    case "C":
-      return <SiC className="w-5 h-5 inline-block mr-1" />;
-    case "C++":
-      return <SiCplusplus className="w-5 h-5 inline-block mr-1" />;
-    case "Java":
-      return <FaJava className="w-5 h-5 inline-block mr-1" />;
-    case "JavaScript":
-      return <SiJavascript className="w-5 h-5 inline-block mr-1" />;
-    case "React.js":
-      return <FaReact className="w-5 h-5 inline-block mr-1" />;
-    case "Express.js":
-      return <SiExpress className="w-5 h-5 inline-block mr-1" />;
-    case "Sequelize":
-      return <SiSequelize className="w-5 h-5 inline-block mr-1" />;
-    case "MySQL":
-      return <SiMysql className="w-5 h-5 inline-block mr-1" />;
-    case "PostgreSQL":
-      return <SiPostgresql className="w-5 h-5 inline-block mr-1" />;
-    case "GitHub":
-      return <FaGithub className="w-5 h-5 inline-block mr-1" />;
-    case "Figma":
-      return <FaFigma className="w-5 h-5 inline-block mr-1" />;
-    default:
-      return null;
-  }
+  return skillIcons[name] || <Code className={iconClass} />;
 }
