@@ -34,7 +34,7 @@ export default function Volunteer() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-primary text-center">{volunteerContent.heading}</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-primary text-center font-serif">{volunteerContent.heading}</h2>
         <div className="mt-8">
           <motion.div
             className="relative border-l border-primary"

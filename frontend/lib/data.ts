@@ -65,6 +65,7 @@ export const projectsContent = {
       techStack: ["Next.js", "React", "TailwindCSS"],
       liveLink: "",
       githubLink: "https://github.com/orgs/Moeyes/",
+      image: "/sport-management-system.png",
     },
     {
       id: 2,
@@ -205,10 +206,19 @@ export const contactContent = {
     },
   ],
 };
-
-export const referenceContent = {
-  name: "Mr. Natt KORAT",
-  position: "Lecturer & Researcher at CADT",
-  email: "natt.korat@cadt.edu.kh",
-  telegram: "@nattKorat",
-};
+export const referenceContent = [
+  {
+    name: 'Mr. Natt KORAT',
+    position: 'Lecturer & Researcher at CADT',
+    email: 'natt.korat@cadt.edu.kh',
+    telegram: '@nattKorat',
+    photo: '/NattKORAT.jpg',  // ← same path pattern as your education photo
+  },
+  {
+    name: 'Mr. Phok Keomonnyratanak',
+    position: 'Senior Web Developer',
+    email: 'rattanakphok9@gmail.com',
+    telegram: '@RatanakMonny',
+    photo: '/PhokKeomonnyratanak.png',  
+  },
+];

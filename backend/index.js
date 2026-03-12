@@ -85,5 +85,4 @@ if (process.env.VERCEL !== '1') {
   });
 }
 
-// ✅ Export Express app for Vercel (instead of app.listen)
 export default app;
